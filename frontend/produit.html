@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+      integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+  </head>
+  <body>
+    <!-- Page Content -->
+    <div class="container">
+      <!-- Portfolio Item Heading -->
+      <h1 class="my-4">Orinoco <small id="name">Nom de l'ours</small></h1>
+
+      <!-- Portfolio Item Row -->
+      <div class="row">
+        <div class="col-md-8">
+          <img class="img-fluid" id="imageUrl" src="" alt="" />
+        </div>
+
+        <div class="col-md-4">
+          <h3 class="my-3">Description</h3>
+          <p id="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra
+            euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem,
+            adipiscing in adipiscing et, interdum nec metus. Mauris ultricies,
+            justo eu convallis placerat, felis enim.
+          </p>
+          <h3 class="my-3"><span id="price">69</span> €</h3>
+          <label for="color">Couleur :</label>
+
+          <select name="color" id="color">
+            <!-- <option value="color_name">Couleur</option> -->
+          </select>
+          <label for="quantity">Quantité :</label>
+
+          <select name="quantity" id="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+          <button type="button" class="btn btn-primary" id="addToCart">
+            Ajouter au panier
+          </button>
+        </div>
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <script src="product.js"></script>
+  </body>
+</html>
