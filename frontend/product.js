@@ -1,20 +1,20 @@
 function getUrlParameter(name) {
   name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-  var regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
-  var results = regex.exec(location.search);
+  const regex = new RegExp("[\\?&]" + name + "=([^&#]*)");
+  let results = regex.exec(location.search);
   return results === null
     ? ""
     : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
 let root = "http://localhost:3000/api/teddies/";
-let id = getUrlParameter("id");
+let id = getUrlParameter("id"); // Should check if id contains exclusively alphanumerical characters and exactly 24 characters
 let url = root + id;
 
-var request = new XMLHttpRequest();
+const request = new XMLHttpRequest();
 request.onreadystatechange = function () {
   if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
-    var response = JSON.parse(this.responseText);
+    const response = JSON.parse(this.responseText);
 
     let title = document.querySelector("title");
 
@@ -46,7 +46,6 @@ request.onreadystatechange = function () {
         quantity: quantity,
       };
 
-      //window.localStorage.setItem("product", JSON.stringify(product));
       let products = JSON.parse(window.localStorage.getItem("products"));
 
       if (products == null) {

@@ -1,16 +1,16 @@
 let products = JSON.parse(window.localStorage.getItem("products"));
 let totalAmount = 0;
 let integerPrice = 0;
+let productsArray = [];
 
 const getProductsInCart = () => {
-  let productsArray = [];
-
   for (let i in products) {
     productsArray.push(products[i].id);
   }
   return productsArray;
 };
 
+// List products in cart and render HTML
 for (let i in products) {
   let root = "http://localhost:3000/api/teddies/";
   let id = products[i].id;
@@ -64,6 +64,8 @@ for (let i in products) {
   request.send();
 }
 
+// Check user inputs
+
 let firstname = document.getElementById("firstname");
 let lastname = document.getElementById("lastname");
 let address = document.getElementById("address");
@@ -92,7 +94,6 @@ function validateEmail(mail) {
   return false;
 }
 
-let productsArray = [];
 const request = new XMLHttpRequest();
 request.onreadystatechange = function () {
   if (this.readyState == XMLHttpRequest.DONE && this.status == 200) {
